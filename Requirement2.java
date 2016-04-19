@@ -20,9 +20,7 @@ public class Requirement2 {
 
 		File resultsFile = new File("fbScores.txt");
 
-		Scanner scan1 = new Scanner(resultsFile); // create a scanner which
-													// scans from a file, in
-													// this case fbScores
+		Scanner scan1 = new Scanner(resultsFile); // create a scanner which scans from a file, in this case fbScores
 
 		String line; // stores the each line of text read from the file
 
@@ -43,14 +41,12 @@ public class Requirement2 {
 
 			int awayscore = 0;
 
-			line = scan1.nextLine(); // scans and reads each line from the
-										// text file
+			line = scan1.nextLine(); // scans and reads each line from the text file
 			line = line.trim();// trims any unnecessary white spaces from
 								// the line
 
 			String[] splitLine = line.split(":"); // array to split lines
-													// (to start testing
-													// process)
+							      // (to start testing process)
 
 			validLine = true; // sets everything to true at first, if when
 			// tested and they aren't, they become false.
@@ -104,15 +100,13 @@ public class Requirement2 {
 													// and is taken as an
 													// exception
 
-					validLine = false; // if not an integer, it fails the
-										// test
+					validLine = false; // if not an integer, it fails the test
 
 				}
 
 			} else {
 
-				validLine = false; // if any of these don't meet the
-									// requirements, they are invalid
+				validLine = false; // if any of these don't meet the requirements, they are invalid
 
 			}
 
@@ -121,13 +115,12 @@ public class Requirement2 {
 					System.out.println(splitLine[0] + "[" + splitLine[2] + "]"
 							+ splitLine[1] + " [" + splitLine[3] + " ]");
 
-					validCount++;// if a line passes all the validation, it is
-									// displayed and is a valid count
+					validCount++;// if a line passes all the validation, it is displayed and is a valid count
 
 					goals += homescore + awayscore; // adds the two right
-													// numbers to left number
-													// and assigns it to the
-													// left ie goals.
+									// numbers to left number
+									// and assigns it to the
+									// left ie goals.
 					// the goals are placed here, as we only want valid lines to
 					// be counted
 
@@ -143,8 +136,7 @@ public class Requirement2 {
 				}
 			} else {
 
-				invalidCount++; // all invalid lines are counted and then
-								// output below
+				invalidCount++; // all invalid lines are counted and then output below
 
 			}
 
