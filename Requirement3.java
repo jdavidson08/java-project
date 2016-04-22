@@ -14,14 +14,11 @@ import java.util.Scanner;
 public class Requirement3 {
 
 	public enum RESULTS {
-		WIN, LOSE, DRAW, UNDEFINED // used to determine result of game,
-									// variables given predefined constants
+		WIN, LOSE, DRAW, UNDEFINED // used to determine result of game, variables given predefined constants
 	};
 
-	static ArrayList<Team> teams = new ArrayList<Team>(); // array list called
-															// teams which takes
-															// values from the
-															// 'Team' class.
+	static ArrayList<Team> teams = new ArrayList<Team>(); // array list called teams which takes
+							      // values from the 'Team' class.
 
 	public static void main(String[] args) {
 		String htmlText = ""; // used for string builder when writing html text.
@@ -61,9 +58,7 @@ public class Requirement3 {
 
 		File resultsFile = new File("fbScores.txt");
 
-		Scanner scan1 = new Scanner(resultsFile); // create a scanner which
-													// scans from a file, in
-													// this case fbScores
+		Scanner scan1 = new Scanner(resultsFile); // create a scanner which scans from a file, in this case fbScores
 
 		String line; // stores the each line of text read from the file
 
@@ -89,42 +84,24 @@ public class Requirement3 {
 			line = line.trim();// trims any unnecessary white spaces from
 								// the line
 
-			String[] splitLine = line.split(":"); // array to split lines
-													// (to start testing
-													// process)
+			String[] splitLine = line.split(":"); // array to split lines (to start testing process)
 
 			validLine = true; // sets everything to true at first, if when
 			// tested and they aren't, they become false.
 
-			if (splitLine.length == 4) { // TEST 1- do all lines have 4
-											// fields?
-											// -if yes, passes test.
+			if (splitLine.length == 4) { // TEST 1- do all lines have 4 fields? -if yes, passes test.
 
-				homeTeam = splitLine[0].trim(); // trims the first two
-												// fields to eliminate white
-												// space
+				homeTeam = splitLine[0].trim(); // trims the first two fields to eliminate white space
 				awayTeam = splitLine[1].trim();
 
-				if (homeTeam != null && homeTeam.isEmpty()) { // if the home
-																// team
-																// (first
-																// field) is
-																// empty, it
-																// then
-																// fails
+				if (homeTeam != null && homeTeam.isEmpty()) { // if the home team (first field) is empty, it then fails
 																// test
 
 					validLine = false;
 
 				}
 
-				if (awayTeam != null && awayTeam.isEmpty()) { // if the away
-																// team(second
-																// field) is
-																// empty,
-																// then
-																// fails
-																// test
+				if (awayTeam != null && awayTeam.isEmpty()) { // if the away team(second field) is empty, then fails test
 
 					validLine = false;
 
@@ -139,9 +116,7 @@ public class Requirement3 {
 
 				}
 
-				catch (NumberFormatException e) { // 'catch' prevents the
-													// loop from crashing if
-													// they aren't integers,
+				catch (NumberFormatException e) { // 'catch' prevents the loop from crashing if they aren't integers,
 													// and is taken as an
 													// exception
 
